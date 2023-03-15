@@ -9,11 +9,12 @@ public class OrderedApp {
 		arr.insert(70);
 		arr.insert(80);
 		arr.insert(90);
-		
 		arr.insert(20);
+		arr.insert(3);
+		arr.insert(1);
 			
-		System.out.println(arr.findItem(90));
-		
+		System.out.println("binary search >>>> " + arr.binarySearch(70));
+		arr.delete(10);
 		arr.print();
 	}
 

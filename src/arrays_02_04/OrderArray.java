@@ -32,28 +32,41 @@ public class OrderArray {
 	
 	
 	// search as using binary search
-	public int findItem(int item) {
+	public int binarySearch(int item) {
 		int lowerBound = 0;
 		int upperBound = count -1;
 		int currentIdx;
 		
 		while(true) {
-			currentIdx = (lowerBound + upperBound) / 2; //4
 			
-			if(array[currentIdx] == item) {
-				return currentIdx;
-			} else if (lowerBound > upperBound) {
-				return -1;
-			} else {
-				if(array[currentIdx] < item) 
-					lowerBound = currentIdx + 1;
-				else
-					upperBound = currentIdx -1;
+		currentIdx = (lowerBound + upperBound) / 2;
+		
+		if(array[currentIdx] == item) 
+			return currentIdx;
+		else if(lowerBound > upperBound) 
+			return count;
+		else {
+			if(array[currentIdx] > item)
+				  upperBound = currentIdx - 1;
+			else
+				 lowerBound = currentIdx + 1;
 			}
 		}
 		
+	}
+	
+	
+	public boolean delete(int item) {
+		int i = binarySearch(item);
 		
-		
+		if(i == count)
+			return false;
+		else
+			for(int k = i; k < count; k++) {
+				array[k] = array[k+1];
+			}
+		count--;
+		return true;
 	}
 	
 	
