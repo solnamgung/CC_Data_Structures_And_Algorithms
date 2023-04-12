@@ -1,4 +1,4 @@
-package sorting_01_01;
+package sorting_03_01;
 
 public class BubbleSortApp {
     public static void main(String[] args) {
