@@ -7,7 +7,7 @@ public class SelectSortApp {
         ArraySel arr;
         arr = new ArraySel(maxSize);
 
-        arr.insert(77);
+        arr.insert(77); 
         arr.insert(99);
         arr.insert(44);
         arr.insert(55);
