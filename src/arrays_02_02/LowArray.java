@@ -1,5 +1,4 @@
 package arrays_02_02;
-
 public class LowArray {	
 	private int[] arr;
 	
@@ -17,7 +16,4 @@ public class LowArray {
 	public int getItem(int index) { 
 		return arr[index];
 	}
-	
-	
-	
 }
